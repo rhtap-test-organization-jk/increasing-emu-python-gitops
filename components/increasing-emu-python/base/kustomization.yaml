@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: increasing-emu-python
+  janus-idp.io/tekton: increasing-emu-python
+  backstage.io/kubernetes-id: increasing-emu-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: increasing-emu-python
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
